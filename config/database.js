@@ -5,7 +5,7 @@ module.exports = uri => {
     mongoose.connect('mongodb://' + uri);
 
     mongoose.connection.on('connected', () => {
-        console.log('Connectado ao MongoDB');
+        console.log('Connectado ao MongoDB: ' + uri);
     });
 
     mongoose.connection.on('error', error => {

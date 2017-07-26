@@ -5,8 +5,9 @@ const bodyParser = require('body-parser');
 module.exports = () => {
 
     const app = express();
+    const port = process.env.PORT || 3000;
 
-    app.set('port', 3000);
+    app.set('port', port);
 
     app.use((req, res, next) => {
 
